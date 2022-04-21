@@ -15,7 +15,8 @@ class _VideoAppState extends State<VideoApp> {
   late VideoPlayerController _controller;
 
   Future<String> setURL() async {
-    String s = await flutterInsta.downloadReels(reelController.text);
+    String s = await flutterInsta
+        .downloadReels("https://www.instagram.com/tv/CLg5YQNJZZ3");
     return s;
   }
 
