@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:video_players/data_layer.dart/data.dart';
+import 'package:video_players/model/livestream_post.dart';
 import 'package:video_players/model/post.dart';
 import 'package:video_players/views/instagram_post_view.dart';
 import 'package:video_players/views/instagram_video_view.dart';
+import 'package:video_players/views/livestream_video_view.dart';
+import 'package:video_players/views/youtube__livestream_view.dart';
 import 'package:video_players/views/youtube_video_view.dart';
 
 void main() {
@@ -58,6 +61,10 @@ class _FeedViewState extends State<FeedView> {
               return const InstagramVideoView();
             case PostType.instagramPost:
               return const InstagramPostView();
+            case PostType.livestreamVideo:
+              return const LivestreamView();
+            case PostType.youtubeLivestream:
+              return const YoutubeLiveStreamView();
           }
         },
       ),
